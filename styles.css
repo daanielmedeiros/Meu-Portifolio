@@ -125,6 +125,8 @@ h1 {
 .texto-sobre {
     text-align: center;
     font-size: 1.2rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
 
 }
 
