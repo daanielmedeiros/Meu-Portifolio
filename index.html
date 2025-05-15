@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel - Portifolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#home" class="menu-link">Home</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="cabecalho">
+            <img src="img/eu.jpg" alt="eu" class="foto-perfil">
+            <h1>Daniel Medeiros</h1>
+            <p class="subtitulo">Desenvolvedor</p>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="titulo-sobre">Sobre Mim</h2>
+        <div class="conteudo-sobre">
+            <p class="texto-sobre">Olá! Meu nome é Daniel, sou um desenvolvedor apaixonado por criar experiências de
+                usuário incríveis.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/projeto1.jpg" alt="projeto1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Projeto 1</h3>
+                    <p class="paragrafo-projeto">Descrição do projeto 1</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto2.jpg" alt="projeto2" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Projeto 2</h3>
+                    <p class="paragrafo-projeto">Descrição do projeto 2</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto3.jpg" alt="projeto3" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Projeto 3</h3>
+                    <p class="paragrafo-projeto">Descrição do projeto 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario-contato" onsubmit="enviarMensagem(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <script>
+
+        function enviarMensagem(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5582994199601'
+
+            const texto = `Olá, meu nome é ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto);
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, '_blank');
+        }
+
+
+    </script>
+
+</body>
+
+</html>
