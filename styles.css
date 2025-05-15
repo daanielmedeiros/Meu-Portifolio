@@ -72,6 +72,10 @@ body {
 
 }
 
+.nome-cabecalho {
+    text-align: center;
+}
+
 .foto-perfil {
     width: 350px;
     height: 350px;
