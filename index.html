@@ -36,14 +36,29 @@
     <section id="sobre" class="sobre">
         <h2 class="titulo-sobre">Sobre Mim</h2>
         <div class="conteudo-sobre">
-            <p class="texto-sobre">Olá! Meu nome é Daniel, sou um profissional altamente dedicado, movido por desafios e pela busca contínua por excelência. Com uma trajetória sólida na área de Supply Chain, acumulo mais de um ano e meio de experiência onde atuei de forma estratégica na análise, automação e otimização de processos. Nesse período, desenvolvi soluções eficientes que vão desde a criação de planilhas inteligentes para controle de pedidos até o desenvolvimento de painéis interativos no Power BI, sempre com foco em performance, insights de valor e apoio à tomada de decisão.</p>
+            <p class="texto-sobre">Olá! Meu nome é Daniel, sou um profissional altamente dedicado, movido por desafios e
+                pela busca contínua por excelência. Com uma trajetória sólida na área de Supply Chain, acumulo mais de
+                um ano e meio de experiência onde atuei de forma estratégica na análise, automação e otimização de
+                processos. Nesse período, desenvolvi soluções eficientes que vão desde a criação de planilhas
+                inteligentes para controle de pedidos até o desenvolvimento de painéis interativos no Power BI, sempre
+                com foco em performance, insights de valor e apoio à tomada de decisão.</p>
 
-            <p class="texto-sobre">Minha paixão por dados evoluiu naturalmente para o universo da tecnologia e do desenvolvimento de software. Atualmente, estou cursando Engenharia de Software, expandindo meus conhecimentos em lógica de programação, estruturas de dados, desenvolvimento web e boas práticas de codificação. Estou dando os primeiros passos na área de desenvolvimento, com forte interesse em back-end, automações, análise de dados e soluções que integrem tecnologia e negócio.</p>
-            
-            <p class="texto-sobre">Tenho como principais características a proatividade, o pensamento analítico, a curiosidade e a vontade constante de aprender. Gosto de trabalhar em equipe, colaborar com diferentes áreas e transformar problemas complexos em soluções eficientes e escaláveis.</p>
-            
-            <p class="texto-sobre">Meu objetivo é unir minha bagagem analítica e visão de processos com as ferramentas da tecnologia para criar soluções inovadoras e contribuir ativamente para o crescimento das organizações. Estou em busca de oportunidades onde eu possa crescer como desenvolvedor, agregar valor com minha experiência multidisciplinar e fazer parte de projetos que impactem positivamente o negócio e as pessoas.</p>
-            
+            <p class="texto-sobre">Minha paixão por dados evoluiu naturalmente para o universo da tecnologia e do
+                desenvolvimento de software. Atualmente, estou cursando Engenharia de Software, expandindo meus
+                conhecimentos em lógica de programação, estruturas de dados, desenvolvimento web e boas práticas de
+                codificação. Estou dando os primeiros passos na área de desenvolvimento, com forte interesse em
+                back-end, automações, análise de dados e soluções que integrem tecnologia e negócio.</p>
+
+            <p class="texto-sobre">Tenho como principais características a proatividade, o pensamento analítico, a
+                curiosidade e a vontade constante de aprender. Gosto de trabalhar em equipe, colaborar com diferentes
+                áreas e transformar problemas complexos em soluções eficientes e escaláveis.</p>
+
+            <p class="texto-sobre">Meu objetivo é unir minha bagagem analítica e visão de processos com as ferramentas
+                da tecnologia para criar soluções inovadoras e contribuir ativamente para o crescimento das
+                organizações. Estou em busca de oportunidades onde eu possa crescer como desenvolvedor, agregar valor
+                com minha experiência multidisciplinar e fazer parte de projetos que impactem positivamente o negócio e
+                as pessoas.</p>
+
         </div>
     </section>
 
@@ -55,7 +70,9 @@
                 <img src="img/projeto1.png" alt="projeto1" class="projetos-imagem">
                 <div class="caixa-textos-projeto">
                     <h3 class="info-projeto">Ginseng APP</h3>
-                    <p class="paragrafo-projeto">Projeto de um aplicativo de gerenciamento de estoque e vendas que teve como objetivo otimizar o processo de controle de estoque e vendas, além de facilitar a visualização e análise dos dados.</p>
+                    <p class="paragrafo-projeto">Projeto de um aplicativo de gerenciamento de estoque e vendas que teve
+                        como objetivo otimizar o processo de controle de estoque e vendas, além de facilitar a
+                        visualização e análise dos dados.</p>
                 </div>
             </div>
 
@@ -63,7 +80,9 @@
                 <img src="img/projeto2.png" alt="projeto2" class="projetos-imagem">
                 <div class="caixa-textos-projeto">
                     <h3 class="info-projeto">Ginseng WEB</h3>
-                    <p class="paragrafo-projeto">Inicialmente criado para ter um painel de realização de pedidos, otimizado para tambem realizar transferências de estoque entre filiais, além de ter um painel de controle de estoque e vendas.</p>
+                    <p class="paragrafo-projeto">Inicialmente criado para ter um painel de realização de pedidos,
+                        otimizado para tambem realizar transferências de estoque entre filiais, além de ter um painel de
+                        controle de estoque e vendas.</p>
                 </div>
             </div>
 
@@ -108,6 +127,40 @@
 
 
     </script>
+
+    <div id="imagemModal" class="modal">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="imagemExpandida">
+    </div>
+
+    <script>
+        // Seleciona o modal e o conteúdo
+        const modal = document.getElementById("imagemModal");
+        const modalImg = document.getElementById("imagemExpandida");
+        const fechar = document.getElementsByClassName("fechar")[0];
+
+        // Adiciona evento para cada imagem
+        document.querySelectorAll(".projetos-imagem").forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        // Fecha o modal
+        fechar.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // Fecha ao clicar fora da imagem
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+
 
 </body>
 
